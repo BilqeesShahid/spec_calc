@@ -1,55 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 -> 1.0.0
+- Modified principles:
+  - Principle 1: New -> Test-Driven Development
+  - Principle 2: New -> Modern Python with Type Hints
+  - Principle 3: New -> Clean and Readable Code
+  - Principle 4: New -> Architectural Decision Records
+  - Principle 5: New -> SOLID, DRY, KISS Principles
+- Added sections:
+  - Technical Stack
+  - Quality Requirements
+- Removed sections:
+  - Principle 6
+- Templates requiring updates: None
+- Follow-up TODOs: None
+-->
+# spec_calc Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Test-Driven Development
+Write tests first (TDD approach). TDD is mandatory: Tests are written, user-approved, and failing before implementation. The Red-Green-Refactor cycle is strictly enforced.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Modern Python with Type Hints
+Use Python 3.12+ with type hints everywhere. This improves code clarity, reduces bugs, and enables static analysis.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Clean and Readable Code
+Keep code clean and easy to read. This facilitates maintenance and collaboration.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Architectural Decision Records
+Document important decisions with ADRs. This provides context and history for architectural choices.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. SOLID, DRY, KISS Principles
+Follow essential OOP principles: SOLID, DRY, KISS. This leads to robust, maintainable, and simple object-oriented design.
 
-### [PRINCIPLE_6_NAME]
+## Technical Stack
 
+- Python 3.12+ with UV package manager
+- pytest for testing
+- Keep all project files in git
 
-[PRINCIPLE__DESCRIPTION]
+## Quality Requirements
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- All tests must pass
+- At least 80% code coverage
+- Use dataclasses for data structures
+- All functions must include type hints on parameters and return types (e.g., `def add(a: float, b: float) -> float:`)
+- All functions must include docstrings explaining what they do (e.g., `"""Add two numbers and return the sum."""`)
+- Follow PEP 8 naming conventions (lowercase_with_underscores for functions)
+- Lines must be under 100 characters
+- No magic numbers; use named constants (e.g., `if x > MAX_POWER_EXPONENT:`)
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews must verify compliance. Complexity must be justified.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-11-14 | **Last Amended**: 2025-11-14
